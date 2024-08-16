@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'boxicons/css/boxicons.min.css';
+// import 'animate.css';
+import Header from './components/Header';
+import Home from './components/pages/Home';
+import Client from './components/pages/Client';
+import Footer from './components/Footer';
+import ContactUs from './components/pages/ContactUs';
+import AboutUs from './components/pages/AboutUs';
+import LawyerList from './components/pages/LawyerList';
+import OurServices from './components/pages/OurServices';
+import AskQuestions from './components/pages/AskQuestions';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<><Home /><Client /></>} />
+          <Route path="/askquestions" element={<AskQuestions />} />
+          <Route path="/lawyerlist" element={<LawyerList />} />
+          <Route path="/ourclients" element={<><Home /><Client /></>} />
+          <Route path="/ourservices" element={<OurServices />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contactus" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
