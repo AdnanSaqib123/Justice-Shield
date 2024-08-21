@@ -37,7 +37,7 @@ html {
 /* General navbar styling */
 .header {
     padding: 1rem 2rem;
-    margin-bottom: 2px;
+    margin-bottom: 8px;
     --bs-bg-opacity: 1;
     background-color: #001431 !important;
 }

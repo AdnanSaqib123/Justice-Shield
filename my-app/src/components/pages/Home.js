@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css';  // Ensure custom CSS complements Bootstrap
-import image from '../images/banner-img.png';
+import image7 from '../images/banner7-img.jpg';
 
 const Home = () => {
     const profiles = [
@@ -32,7 +32,7 @@ const Home = () => {
                     {/* Right Container */}
                     <div className="col-md-6 right-container text-center">
                         <div className="banner_img">
-                            <img src={image} alt="Banner" className="img-fluid" />
+                            <img src={image7} alt="Banner" className="img-fluid" />
                         </div>
                         {profiles.map((profile, index) => (
                             <a href={profile.whatsappLink} className="stickyicon btn btn-success mb-3">

@@ -3,26 +3,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'boxicons/css/boxicons.min.css'; // Import Boxicons
 import './Client.css';
 import image from '../images/customer-img.png';
-// import image2 from '../images/quick-icon.png';
 
 const reviews = [
     {
         name: 'Giolio Mark',
         text: 'Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
         img: image,
-        // icon: image2,
     },
     {
         name: 'DenoMark',
         text: 'Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
         img: image,
-        // icon: image2,
     },
     {
         name: 'DenoMark',
         text: 'Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
         img: image,
-        // icon: image2,
     },
 ];
 
