@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'boxicons/css/boxicons.min.css'; // Import Boxicons
 import './Client.css';
 import image from '../images/customer-img.png';
-import image2 from '../images/quick-icon.png';
+// import image2 from '../images/quick-icon.png';
 
 const reviews = [
     {
         name: 'Giolio Mark',
         text: 'Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
         img: image,
-        icon: image2,
+        // icon: image2,
     },
     {
         name: 'DenoMark',
         text: 'Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
         img: image,
-        icon: image2,
+        // icon: image2,
     },
     {
         name: 'DenoMark',
         text: 'Anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.',
         img: image,
-        icon: image2,
+        // icon: image2,
     },
 ];
 
@@ -38,64 +40,50 @@ const Client = () => {
     };
 
     return (
-        <div id="ourClients" className="customer_section layout_padding">
-            <div className="container">
-                <div className="row">
-                    <div className="col-sm-12">
-                        <h1 className="customer_taital">CLIENT REVIEWS</h1>
-                    </div>
-                </div>
-            </div>
-            <div id="my_slider" className="carousel">
+        <div id="ourClients" className="container py-5">
+            <h1 className="text-center text-primary font-weight-bold mb-5">CLIENT REVIEWS</h1>
+
+            <div id="carouselExampleControls" className="carousel slide">
                 <div className="carousel-inner">
                     {reviews.map((review, index) => (
                         <div
                             key={index}
                             className={`carousel-item ${index === currentIndex ? 'active' : ''}`}
                         >
-                            <div className="customer_section_2">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-md-12">
-                                            <div className="box_main">
-                                                <div className="customer_main">
-                                                    <div className="customer_left">
-                                                        <div className="customer_img">
-                                                            <img src={review.img} alt="Customer" />
-                                                        </div>
-                                                    </div>
-                                                    <div className="customer_right">
-                                                        <h3 className="customer_name">
-                                                            {review.name} <span className="quick_icon">
-                                                                <img src={review.icon} alt="Quick Icon" />
-                                                            </span>
-                                                        </h3>
-                                                        <p className="enim_text">{review.text}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div className="d-flex align-items-center justify-content-center p-3">
+                                <div className="d-flex flex-column flex-md-row align-items-start">
+                                    <div className="mr-md-3">
+                                        <img src={review.img} alt="Customer" className="img-fluid" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-weight-bold text-danger d-flex align-items-center">
+                                            {review.name}
+                                            {/* <img src={review.icon} alt="Quick Icon" className="ml-2" /> */}
+                                        </h3>
+                                        <p className="text-dark mt-2">{review.text}</p>
                                     </div>
                                 </div>
-                            </div><br /><br />
+                            </div>
                         </div>
                     ))}
                 </div>
                 <a
                     className="carousel-control-prev"
-                    href="#my_slider"
+                    href="#carouselExampleControls"
                     role="button"
                     onClick={handlePrev}
                 >
-                    <i className="bx bx-left-arrow-alt"></i>
+                    <i className=" carousel-control-prev-icon"></i>
+                    <span className="sr-only"></span>
                 </a>
                 <a
                     className="carousel-control-next"
-                    href="#my_slider"
+                    href="#carouselExampleControls"
                     role="button"
                     onClick={handleNext}
                 >
-                    <i className="bx bx-right-arrow-alt"></i>
+                    <i className=" carousel-control-next-icon"></i>
+                    <span className="sr-only"></span>
                 </a>
             </div>
         </div>

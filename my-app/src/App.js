@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import 'boxicons/css/boxicons.min.css';
-// import 'animate.css';
 import Header from './components/Header';
 import Home from './components/pages/Home';
 import Client from './components/pages/Client';
@@ -19,10 +19,10 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<><Home /><Client /></>} />
+          <Route path="/" element={<><Home /><AboutUs /><Client /></>} />
           <Route path="/askquestions" element={<AskQuestions />} />
           <Route path="/lawyerlist" element={<LawyerList />} />
-          <Route path="/ourclients" element={<><Home /><Client /></>} />
+          <Route path="/ourclients" element={<Client />} />
           <Route path="/ourservices" element={<OurServices />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contactus" element={<ContactUs />} />

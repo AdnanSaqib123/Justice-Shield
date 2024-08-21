@@ -1,21 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.5s ease;
-}
-
+/* Global styles */
 body {
     color: #666666;
     font-size: 14px;
     line-height: 1.8;
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 a {
@@ -24,134 +13,117 @@ a {
     transition: all 0.3s ease;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #111111;
-    margin-bottom: 10px;
-}
-
-h1 {
-    font-size: 24px;
-}
-
-h2 {
-    font-size: 22px;
-}
-
-h3 {
-    font-size: 18px;
-}
-
-p {
-    margin: 20px 0;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 24px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-button,
-.btn {
-    border: 0;
-    cursor: pointer;
-    outline: none;
-}
-
-.full {
-    width: 100%;
-}
-
-.layout_padding {
-    padding-top: 100px;
-}
-
 /* Header Section */
 .header_section {
     width: 100%;
-    height: 70rem;
-    background: linear-gradient(90deg, #001431 61%, #f8f2e2 61%);
+    height: 50rem;
     position: relative;
 }
 
-/* Banner Section */
-.banner_section {
-    width: 100%;
-    padding: 100px 0;
-}
-
-.banner_taital_main {
-    padding-left: 100px;
+/* Left Container */
+.left-container {
+    background-color: #001431;
+    color: #fefefd;
+    padding: 100px 30px;
 }
 
 .banner_taital {
-    margin-top: 100px;
-    font-size: 60px;
-    color: #fefefd;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 4rem;
+    margin-left: 40px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 .banner_text {
-    width: 72%;
-    font-size: 16px;
-    color: #fefefd;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 2.5rem;
+    margin-left: 40px;
     padding-top: 10px;
 }
 
 .both-btn {
-    justify-content: space-evenly;
-    padding: 0px 130px;
     display: flex;
-    margin-top: -38px;
-    margin-left: -160px;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.started_bt,
-.readmore_btn {
-    width: 170px;
-    margin-top: 30px;
+.both-btn .me-2 {
+    margin-left: -310px;
 }
 
-.started_bt a,
-.readmore_btn a {
-    display: block;
-    padding: 8px 10px;
-    color: #ffffff;
-    background-color: #e73232;
-    text-align: center;
-    font-size: 18px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+.both-btn:hover {
+    cursor: pointer;
+    background-color: #021430;
+    color: #1f1f1f;
 }
 
-.started_bt a:hover,
-.readmore_btn a:hover {
-    color: #001431;
-    background-color: #ffffff;
-}
-
-.readmore_btn.active a {
-    color: #001431;
-    background-color: #ffffff;
-}
-
-.banner_img {
-    width: 58%;
-    margin: 0 auto;
-    text-align: center;
+/* Right Container */
+.right-container {
+    background-color: #f8f2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .banner_img img {
-    width: 100%;
-    margin-top: 72px;
-    margin-left: 70px;
+    max-width: 100%;
+    height: auto;
+}
+
+.stickyicon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    /* Adjust font size for the icon */
+    text-align: center;
+    padding: 0;
+    line-height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.stickyicon:hover {
+    transform: scale(1.1);
+}
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 767.98px) {
+    .header_section {
+        height: auto;
+        /* Adjust height for better responsiveness */
+    }
+
+    .banner_taital {
+        font-size: 2rem;
+    }
+
+    .banner_text {
+        font-size: 0.875rem;
+    }
+
+    .both-btn {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .stickyicon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.7rem;
+        bottom: 50px;
+        right: 15px;
+    }
 }

@@ -1,121 +1,44 @@
-.customer_section {
-    width: 100%;
-    float: left;
-}
-
-.customer_taital {
-    width: 100%;
-    float: left;
-    font-size: 40px;
-    color: #001431;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.customer_section_2 {
-    width: 100%;
-    float: left;
-    margin-top: 50px;
-}
-
-.box_main {
-    width: 100%;
-    float: left;
-    background-color: #ffffff;
-    padding: 0px 50px 0px 50px;
-    margin-bottom: 100px;
-}
-
-.customer_text {
-    width: 100%;
-    font-size: 14px;
-    color: #737372;
-    margin: 0 auto;
-}
-
-.quick_icon {
-    float: right;
-}
-
-.customer_main {
-    width: 100%;
-    margin-top: 50px;
-}
-
-.customer_left {
-    width: 30%;
-    float: left;
-}
-
-.customer_right {
-    width: 70%;
-    float: left;
-    margin-top: 40px;
-}
-
-.customer_name {
-    width: 100%;
-    float: left;
-    font-size: 26px;
-    font-weight: bold;
-    color: #e73232;
-}
-
-.enim_text {
-    width: 100%;
-    float: left;
-    font-size: 16px;
-    color: #001431;
-    margin: 20px 0px 0px 0px;
-}
-
-#my_slider a.carousel-control-prev {
-    left: 30px;
-    top: 190px;
-}
-
-#my_slider a.carousel-control-next {
-    right: 30px;
-    top: 190px;
-}
-
-#my_slider .carousel-control-next,
-#my_slider .carousel-control-prev {
+.carousel-control-prev,
+.carousel-control-next {
+    margin-top: 100px;
     width: 55px;
     height: 55px;
     background: #001431;
     opacity: 1;
-    font-size: 35px;
-    color: #ffffff;
-    border-radius: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#my_slider .carousel-control-next:focus,
-#my_slider .carousel-control-next:hover,
-#my_slider .carousel-control-prev:focus,
-#my_slider .carousel-control-prev:hover {
-    color: #001431;
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: #ffffff;
+    font-size: 24px;
+    /* Adjust size as needed */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
     background-color: #e73232;
 }
 
-.carousel-inner {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+.carousel-control-prev-icon {
+    margin-left: 0;
 }
 
-.carousel-item {
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: all 0.5s ease-in-out;
+.carousel-control-next-icon {
+    margin-right: 0;
 }
 
-.carousel-item.active {
-    left: 0;
-    opacity: 1;
-    position: relative;
+.text-danger {
+    margin-top: 100px;
 }
